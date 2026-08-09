@@ -1,0 +1,23 @@
+{
+  "name": "telegram-bot",
+  "version": "1.0.0",
+  "description": "My first project",
+  "homepage": "https://github.com/muraaa129/telegram-bot#readme",
+  "bugs": {
+    "url": "https://github.com/muraaa129/telegram-bot/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muraaa129/telegram-bot.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "grammy": "^1.45.1"
+  }
+}
