@@ -6,7 +6,7 @@ import * as messages from './morefiles/message.js';
 
 const TOKEN = process.env.BOT_TOKEN;
 const bot = new Bot(TOKEN);
-const CHAT_ID = -4636532568;
+const CHAT_ID = process.env.CHAT_ID;
 
 bot.command('stats', async(ctx) => {
     const stats = calc.calculateStats(anniversary);
