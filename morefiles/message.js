@@ -1,5 +1,14 @@
 import { letters, getRandomLetter } from './letters.js'
 
+export function getHelpMessage() {
+return `Қолжетімді командалар:
+    
+/stats — қанша уақыт бірге екенімізді білу
+/days — күндер санын білу
+/letter — кездейсоқ хат алу
+/help — қолжетімді командалар тізімі`
+}
+
 export function getStatsMessage(stats) {
     return `Біз ${stats.years} жыл, ${stats.months} ай және ${stats.days} күн біргеміз, Жаным! ❤️`
 }
