@@ -3,6 +3,7 @@ import { Bot } from 'grammy';
 import { anniversary } from './morefiles/dates.js';
 import * as calc from './morefiles/dateCalculator.js';
 import * as messages from './morefiles/message.js';
+import { letters, getRandomLetter } from './morefiles/letters.js';
 
 const TOKEN = process.env.BOT_TOKEN;
 const bot = new Bot(TOKEN);
@@ -22,6 +23,16 @@ bot.command('stats', async(ctx) => {
 bot.command('days', async(ctx) => {
     const days = calc.calculateDays(anniversary);
     const text = messages.getDaysMessage(days);
+
+    await ctx.reply(text, {
+        reply_parameters: {
+            message_id: ctx.msg.message_id
+        }
+    })
+});
+
+bot.command('letter', async(ctx) => {
+    const text = getRandomLetter(letters);
 
     await ctx.reply(text, {
         reply_parameters: {
